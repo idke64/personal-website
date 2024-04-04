@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .margins {
+    @apply m-auto w-[min(950px,96%)];
+  }
+  .nav-margins {
+    @apply m-auto w-[min(960px,96%)];
+  }
+  .navlink {
+    @apply text-text-3 font-medium duration-200 relative rounded px-2 py-1 flex items-center hover:text-text-2;
+  }
+}
+
+@layer base {
+  html {
+    @apply overflow-y-scroll overflow-x-hidden bg-bg-1;
+  }
+  h1 {
+    @apply font-bold text-text-1 text-6xl;
+  }
+  h2 {
+    @apply font-bold text-text-1 text-4xl;
+  }
+  h3 {
+    @apply font-bold text-text-1 text-3xl;
+  }
+  h4 {
+    @apply font-semibold text-text-1 text-2xl;
+  }
+  h5 {
+    @apply font-medium text-text-1 text-xl;
+  }
+  h6 {
+    @apply font-medium text-lg text-text-1;
+  }
+  p {
+    @apply text-text-3;
+  }
+}
