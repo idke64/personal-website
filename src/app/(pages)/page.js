@@ -1,34 +1,77 @@
+import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
+import Link from "next/link";
+import projects from "@/content/projects";
 
 export default function Home() {
   return (
     <>
-      <section className="w-full h-[calc(100vh-82px)]">
+      <section className="w-full h-[calc(100vh-66px)] py-8">
         <div className="margins h-full flex items-center">
           <div className="flex justify-between gap-x-16">
-            <div className="flex flex-col gap-y-6 w-1/2">
-              <div className="flex ">
-                <h1 className="bg-gradient-to-r from-palette-green via-palette-cyan to-palette-yellow w-40 text-transparent bg-clip-text">
-                  Hello
-                </h1>
-                <h1>🫠</h1>
-              </div>
+            <div className="flex flex-col gap-y-4 w-1/2">
+              <h1 className="text-transparent bg-clip-text w-full gradient-text animate-gradient-text mini-divider">
+                Hi, I'm Joe
+              </h1>
 
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="border rounded w-1/2 ">
-              <Image alt="Profile Picture" className="w-full h-full" />
-              <div className=""></div>
+              <div className="flex flex-col gap-y-2">
+                <p>
+                  I am currently a student at{" "}
+                  <Link href="/" className="link">
+                    XYZ
+                  </Link>{" "}
+                  studying Computer Science. I'm particularly passionate about{" "}
+                  <Link href={"/"} className="link">
+                    web dev
+                  </Link>
+                  ,{" "}
+                  <Link href={"/"} className="link">
+                    machine learning
+                  </Link>
+                  ,{" "}
+                  <Link href={"/"} className="link">
+                    3D graphics
+                  </Link>
+                  , and{" "}
+                  <Link href={"/"} className="link">
+                    social good
+                  </Link>
+                  . In my free time, I enjoy biking, ping pong, and video games.
+                  This is a place for me to show off what I've been up to and
+                  mess around with cool tech (mostly CSS) I find interesting.
+                </p>
+                <p>Thanks for stopping by!</p>
+              </div>
             </div>
           </div>
+        </div>
+        <hr />
+      </section>
+      <section className="py-8">
+        <div className="margins flex flex-col gap-y-8 items-center">
+          <div className="flex flex-col items-center gap-y-4">
+            <h2>Projects</h2>
+            <div className="w-12 h-1 rounded-full gradient-bg-r" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                image={project.image}
+                link={project.link}
+                github={project.github}
+                name={project.name}
+                description={project.description}
+              />
+            ))}
+          </div>
+          <Link
+            href={"/projects"}
+            className="btn-primary h-9 flex items-center justify-center"
+          >
+            View More
+          </Link>
         </div>
       </section>
     </>

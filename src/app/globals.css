@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #00ff87,
+    #60efff,
+    #e81cff,
+    #e32636,
+    #e81cff,
+    #60efff,
+    #00ff87
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+}
+
+.gradient-bg-b {
+  background: linear-gradient(to bottom, #00ff87, #60efff, #e81cff, #e32636);
+  background-size: 400% 400%;
+}
+
+.gradient-bg-r {
+  background: linear-gradient(to right, #00ff87, #60efff, #e81cff, #e32636);
+  background-size: 100% 100%;
+}
+
 @layer components {
   .margins {
     @apply m-auto w-[min(950px,96%)];
@@ -10,7 +35,16 @@
     @apply m-auto w-[min(960px,96%)];
   }
   .navlink {
-    @apply text-text-3 font-medium duration-200 relative rounded px-2 py-1 flex items-center hover:text-text-2;
+    @apply text-text-3 font-medium duration-200 relative rounded px-2 py-1 flex items-center text-sm hover:text-text-1;
+  }
+  .link {
+    @apply font-medium duration-200 relative after:rounded-sm after:w-full after:h-[50%] after:bg-palette-purple/10 text-palette-purple after:absolute after:left-1 after:bottom-0 after:duration-200 after:origin-right hover:after:-left-[2px] hover:after:w-[calc(100%+4px)] hover:after:bottom-[10%] hover:after:h-[80%] whitespace-nowrap;
+  }
+  .btn-primary {
+    @apply bg-palette-cyan text-bg-1 rounded-full px-4 duration-200 font-semibold relative before:bg-palette-cyan/50 before:w-full before:h-full before:absolute before:left-1 before:top-1 before:rounded-full before:-z-10 hover:before:top-0 hover:before:left-0 before:duration-200 hover:bg-palette-cyan-dark;
+  }
+  .btn-secondary {
+    @apply bg-palette-cyan-light-2 text-palette-cyan-dark rounded-full px-4 duration-200 font-semibold relative before:bg-palette-cyan-light-2/50 before:w-full before:h-full before:absolute before:left-1 before:top-1 before:rounded-full before:-z-10 hover:before:top-0 hover:before:left-0 before:duration-200 hover:bg-palette-cyan-light-1;
   }
 }
 
@@ -19,7 +53,7 @@
     @apply overflow-y-scroll overflow-x-hidden bg-bg-1;
   }
   h1 {
-    @apply font-bold text-text-1 text-6xl;
+    @apply font-bold text-text-1 text-5xl;
   }
   h2 {
     @apply font-bold text-text-1 text-4xl;

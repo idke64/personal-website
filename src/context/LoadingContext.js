@@ -6,9 +6,10 @@ const LoadingProvider = ({ children }) => {
   return (
     <>
       {children}
+
       <Next13ProgressBar
         height="3px"
-        color="#44E5E7"
+        color="#00FF87"
         options={{ showSpinner: false }}
         showOnShallow
         stopDelayMs={200}
