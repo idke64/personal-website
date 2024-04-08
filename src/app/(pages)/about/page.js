@@ -4,7 +4,7 @@ function About() {
       <div className="margins">
         <div className="flex justify-between gap-x-16">
           <div className="flex flex-col gap-y-4">
-            <h2>Lorem Ipsum Words</h2>
+            <h2>About</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

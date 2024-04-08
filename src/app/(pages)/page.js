@@ -1,20 +1,44 @@
+"use client";
+
 import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
 import Link from "next/link";
 import projects from "@/content/projects";
+import Blob from "@/components/Blob";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "/src/aos-animations.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 400,
+      easing: "ease-in-sine",
+      once: true,
+    });
+  });
   return (
     <>
-      <section className="w-full h-[calc(100vh-66px)] py-8">
+      <section className="w-full h-[calc(100vh-66px)] pb-8">
         <div className="margins h-full flex items-center">
-          <div className="flex justify-between gap-x-16">
+          <div className="flex justify-between gap-x-20 items-center">
             <div className="flex flex-col gap-y-4 w-1/2">
-              <h1 className="text-transparent bg-clip-text w-full gradient-text animate-gradient-text mini-divider">
-                Hi, I'm Joe
-              </h1>
+              <div className="flex justify-start gap-x-2">
+                <h1
+                  className="text-transparent bg-clip-text gradient-text animate-gradient-text"
+                  data-aos="fade-in-up"
+                >
+                  Hi, I'm Joe
+                </h1>
+                <h1>👍</h1>
+              </div>
 
-              <div className="flex flex-col gap-y-2">
+              <div
+                className="flex flex-col gap-y-2"
+                data-aos="fade-in-up"
+                data-aos-delay="200"
+              >
                 <p>
                   I am currently a student at{" "}
                   <Link href="/" className="link">
@@ -38,23 +62,26 @@ export default function Home() {
                   </Link>
                   . In my free time, I enjoy biking, ping pong, and video games.
                   This is a place for me to show off what I've been up to and
-                  mess around with cool tech (mostly CSS) I find interesting.
+                  mess around with cool stuff I find interesting.
                 </p>
                 <p>Thanks for stopping by!</p>
               </div>
             </div>
+            <Blob aos="fade-in-left" />
           </div>
         </div>
-        <hr />
       </section>
       <section className="py-8">
-        <div className="margins flex flex-col gap-y-8 items-center">
-          <div className="flex flex-col items-center gap-y-4">
-            <h2>Projects</h2>
-            <div className="w-12 h-1 rounded-full gradient-bg-r" />
+        <div className="margins flex flex-col gap-y-10 items-center">
+          <div
+            className="relative w-full flex items-center justify-center"
+            data-aos="fade-in-up"
+          >
+            <hr className="w-full absolute -z-10" />
+            <h2 className="bg-bg-1 px-7">Projects</h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-6">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -63,6 +90,7 @@ export default function Home() {
                 github={project.github}
                 name={project.name}
                 description={project.description}
+                aos={index % 2 === 0 ? "fade-in-right" : "fade-in-left"}
               />
             ))}
           </div>

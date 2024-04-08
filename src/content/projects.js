@@ -23,7 +23,7 @@ export default [
   {
     name: "Car Evolution",
     description:
-      "Developed a car evolution simulation using genetic algorithms with Python and Pygame.",
+      "Developed a car evolution simulation using genetic algorithms with Python and Pygame. Includes custom assets and simple camera system.",
     github: "https://github.com/idke64/car-evolution",
     image: carevolution,
   },

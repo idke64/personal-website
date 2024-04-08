@@ -35,7 +35,7 @@
     @apply m-auto w-[min(960px,96%)];
   }
   .navlink {
-    @apply text-text-3 font-medium duration-200 relative rounded px-2 py-1 flex items-center text-sm hover:text-text-1;
+    @apply text-text-3 font-medium duration-200 relative rounded px-2 py-1 flex items-center text-sm hover:bg-[#f1f1f1] justify-center;
   }
   .link {
     @apply font-medium duration-200 relative after:rounded-sm after:w-full after:h-[50%] after:bg-palette-purple/10 text-palette-purple after:absolute after:left-1 after:bottom-0 after:duration-200 after:origin-right hover:after:-left-[2px] hover:after:w-[calc(100%+4px)] hover:after:bottom-[10%] hover:after:h-[80%] whitespace-nowrap;

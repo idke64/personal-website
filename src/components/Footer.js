@@ -14,25 +14,41 @@ function Footer() {
       <div className="flex flex-col gap-y-5 margins justify-center items-center">
         <hr className="w-full" />
         <div className="flex gap-x-4 pt-2">
-          <Link href={"https://github.com/idke64/"}>
+          <Link
+            href={"https://github.com/idke64/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon
               className="h-6 text-text-2 hover:text-text-1 duration-200"
               icon={faGithub}
             />
           </Link>
-          <Link href={"https://www.instagram.com/idke644/"}>
+          <Link
+            href={"https://www.instagram.com/idke644/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon
               className="h-6 text-text-2 hover:text-text-1 duration-200"
               icon={faInstagram}
             />
           </Link>
-          <Link href={"https://www.linkedin.com/in/andy-y-392713279/"}>
+          <Link
+            href={"https://www.linkedin.com/in/andy-y-392713279/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon
               className="h-6 text-text-2 hover:text-text-1 duration-200"
               icon={faLinkedin}
             />
           </Link>
-          <Link href={"mailto:deliciousbrain42@gmail.com"}>
+          <Link
+            href={"mailto:deliciousbrain42@gmail.com"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon
               className="h-6 text-text-2 hover:text-text-1 duration-200"
               icon={faEnvelope}
