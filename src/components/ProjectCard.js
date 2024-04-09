@@ -8,12 +8,12 @@ function ProjectCard(props) {
       data-aos={props.aos}
     >
       <div className="flex flex-col gap-y-4 relative">
-        <div className="w-full h-60 overflow-hidden rounded">
+        <div className="w-full h-60 overflow-hidden rounded bg-black">
           {props.image ? (
             <Image
               src={props.image ? props.image : ""}
               alt="Project Image"
-              className="w-full h-full object-cover hover:scale-110 duration-200"
+              className="w-full h-full object-cover"
               width={1000}
               height={1000}
             />

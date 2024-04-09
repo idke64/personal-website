@@ -9,6 +9,7 @@ import logo_gradient from "@/assets/logo_gradient.svg";
 import logo_double from "@/assets/logo_double.svg";
 import logo_black from "@/assets/logo_black.svg";
 import Image from "next/image";
+import logo_gray from "@/assets/logo_gray.svg";
 
 function Navbar() {
   const route = usePathname();
@@ -51,7 +52,7 @@ function Navbar() {
                   className="h-8 w-8 hover:text-black absolute"
                 />
                 <Image
-                  src={logo_black}
+                  src={logo_gray}
                   className="h-8 w-8 hover:text-black z-10 absolute group-hover:opacity-0 opacity-100 duration-200"
                 />
               </Link>

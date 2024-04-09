@@ -24,11 +24,8 @@ export default function Home() {
         <div className="margins h-full flex items-center">
           <div className="flex justify-between gap-x-20 items-center">
             <div className="flex flex-col gap-y-4 w-1/2">
-              <div className="flex justify-start gap-x-2">
-                <h1
-                  className="text-transparent bg-clip-text gradient-text animate-gradient-text"
-                  data-aos="fade-in-up"
-                >
+              <div className="flex justify-start gap-x-2" data-aos="fade-in-up">
+                <h1 className="text-transparent bg-clip-text gradient-text animate-gradient-text">
                   Hi, I'm Joe
                 </h1>
                 <h1>👍</h1>
@@ -67,7 +64,7 @@ export default function Home() {
                 <p>Thanks for stopping by!</p>
               </div>
             </div>
-            <Blob aos="fade-in-left" />
+            <Blob aos="fade-in-down" />
           </div>
         </div>
       </section>
@@ -75,7 +72,7 @@ export default function Home() {
         <div className="margins flex flex-col gap-y-10 items-center">
           <div
             className="relative w-full flex items-center justify-center"
-            data-aos="fade-in-up"
+            data-aos="fade-in"
           >
             <hr className="w-full absolute -z-10" />
             <h2 className="bg-bg-1 px-7">Projects</h2>
@@ -90,7 +87,7 @@ export default function Home() {
                 github={project.github}
                 name={project.name}
                 description={project.description}
-                aos={index % 2 === 0 ? "fade-in-right" : "fade-in-left"}
+                aos={"fade-in-up"}
               />
             ))}
           </div>
