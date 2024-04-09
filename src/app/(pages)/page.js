@@ -26,7 +26,7 @@ export default function Home() {
             <div className="flex flex-col gap-y-4 w-1/2">
               <div className="flex justify-start gap-x-2" data-aos="fade-in-up">
                 <h1 className="text-transparent bg-clip-text gradient-text animate-gradient-text">
-                  Hi, I'm Joe
+                  Hi, I&apos;m Joe
                 </h1>
                 <h1>👍</h1>
               </div>
@@ -41,7 +41,8 @@ export default function Home() {
                   <Link href="/" className="link">
                     XYZ
                   </Link>{" "}
-                  studying Computer Science. I'm particularly passionate about{" "}
+                  studying Computer Science. I&apos;m particularly passionate
+                  about{" "}
                   <Link href={"/"} className="link">
                     web dev
                   </Link>
@@ -58,8 +59,8 @@ export default function Home() {
                     social good
                   </Link>
                   . In my free time, I enjoy biking, ping pong, and video games.
-                  This is a place for me to show off what I've been up to and
-                  mess around with cool stuff I find interesting.
+                  This is a place for me to show off what I&apos;ve been up to
+                  and mess around with cool stuff I find interesting.
                 </p>
                 <p>Thanks for stopping by!</p>
               </div>
