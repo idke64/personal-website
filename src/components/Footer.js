@@ -5,6 +5,10 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faGithubAlt,
+  faGithubSquare,
+  faInstagramSquare,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -20,8 +24,8 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className="h-6 text-text-2 hover:text-text-1 duration-200"
-              icon={faGithub}
+              className="h-5 text-text-3 hover:text-text-1 duration-200"
+              icon={faGithubAlt}
             />
           </Link>
           <Link
@@ -30,18 +34,19 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className="h-6 text-text-2 hover:text-text-1 duration-200"
+              className="h-5 text-text-3 hover:text-text-1 duration-200"
               icon={faInstagram}
             />
           </Link>
+          <p className="text-sm">Made by me for fun 🫠</p>
           <Link
             href={"https://www.linkedin.com/in/andy-y-392713279/"}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className="h-6 text-text-2 hover:text-text-1 duration-200"
-              icon={faLinkedin}
+              className="h-5 text-text-3 hover:text-text-1 duration-200"
+              icon={faLinkedinIn}
             />
           </Link>
           <Link
@@ -50,13 +55,13 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className="h-6 text-text-2 hover:text-text-1 duration-200"
+              className="h-5 text-text-3 hover:text-text-1 duration-200"
               icon={faEnvelope}
             />
           </Link>
         </div>
 
-        <p className="text-sm">Made by me for fun 🫠</p>
+        
       </div>
     </footer>
   );

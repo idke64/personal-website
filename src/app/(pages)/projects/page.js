@@ -6,9 +6,13 @@ function Projects() {
   return (
     <section className="py-8">
       <div className="margins flex flex-col gap-y-10">
-        <div className="flex flex-col gap-y-4">
-          <h2>Projects</h2>
-        </div>
+      <div
+            className="relative w-full flex items-center"
+            data-aos="fade-in"
+          >
+            <hr className="w-full absolute -z-10" />
+            <h2 className="bg-bg-1 pr-7">Projects</h2>
+          </div>
 
         <div className="grid grid-cols-2 gap-6">
           {projects.map((project, index) => (
@@ -19,6 +23,7 @@ function Projects() {
               github={project.github}
               name={project.name}
               description={project.description}
+              aos={"fade-in-up"}
             />
           ))}
         </div>

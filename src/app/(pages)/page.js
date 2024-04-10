@@ -80,7 +80,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 max-md:grid-cols-1 gap-6">
-            {projects.map((project, index) => (
+            {projects.slice(0,4).map((project, index) => (
               <ProjectCard
                 key={index}
                 image={project.image}
