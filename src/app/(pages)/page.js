@@ -26,9 +26,9 @@ export default function Home() {
             <div className="flex flex-col gap-y-4 w-1/2">
               <div className="flex justify-start gap-x-2" data-aos="fade-in-up">
                 <h1 className="text-transparent bg-clip-text gradient-text animate-gradient-text">
-                  Hi, I&apos;m Joe
+                  Hi, I&apos;m Joe 👍
                 </h1>
-                <h1>👍</h1>
+                
               </div>
 
               <div
@@ -79,8 +79,8 @@ export default function Home() {
             <h2 className="bg-bg-1 px-7">Projects</h2>
           </div>
 
-          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-6">
-            {projects.slice(0,4).map((project, index) => (
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-8">
+            {projects.slice(0, 4).map((project, index) => (
               <ProjectCard
                 key={index}
                 image={project.image}
