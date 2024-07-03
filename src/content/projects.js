@@ -7,7 +7,7 @@ export default [
   {
     name: "CodeBytes",
     description:
-      "Lead development of competitive coding website with custom problems, authentication, judging system, submissions, and blog. Built with NextJS, Tailwind, and Firebase.",
+      "Competitive coding website with custom problems, authentication, judging system, submissions, and blog.",
     github: "https://github.com/idke64/codebytes",
     link: "codebytes.codes",
     image: codebytes,
@@ -15,7 +15,7 @@ export default [
   {
     name: "NVComputing Website",
     description:
-      "Maintained and updated website for Neuqua Valley's computing club containing meeting info and resources. Used ExpressJS and Bootstrap.",
+      "Website for Neuqua Valley's computing club containing meeting info and resources.",
     github: "https://github.com/nvcomputing/nvcomputingsite/",
     link: "nvcomputing.com",
     image: nvcomputing,
@@ -23,14 +23,14 @@ export default [
   {
     name: "Car Evolution",
     description:
-      "Developed a car evolution simulation using genetic algorithms with Python and Pygame. Includes custom assets and simple camera system.",
+      "Car evolution simulation using genetic algorithms. Includes custom assets and simple camera system.",
     github: "https://github.com/idke64/car-evolution",
     image: carevolution,
   },
   {
     name: "Gnomon Learning",
     description:
-      "Created website for Gnomon Learning, a tutoring service, using NextJS, Tailwind, and Firebase. Implements authentication and basic CRUD operations.",
+      "Website for Gnomon Learning, a tutoring service. Implements authentication and basic CRUD operations.",
     github: "https://github.com/idke64/gnomon",
     link: "gnomonlearning.org",
     image: gnomonlearning,

@@ -1,7 +1,7 @@
 function Blob(props) {
   return (
     <>
-      <div className="w-96 h-96 relative" data-aos={props.aos}>
+      <div className="w-96 h-96 relative max-lg:hidden" data-aos={props.aos}>
         <svg
           id="svg-blob"
           viewBox="0 0 100 100"
@@ -10,17 +10,22 @@ function Blob(props) {
         >
           <defs>
             <linearGradient id="blob-gradient" x1="0" x2="1" y1="1" y2="0">
-              <stop id="stop1" stop-color="#00FF87FF" offset="0%"></stop>
-              <stop id="stop2" stop-color="#43CAF0FF" offset="100%"></stop>
+              <stop id="stop1" stopColor="#00FF87FF" offset="0%"></stop>
+              <stop id="stop2" stopColor="#43CAF0FF" offset="100%"></stop>
             </linearGradient>
+            <pattern
+              patternUnits="userSpaceOnUse"
+              width="100"
+              height="100"
+            ></pattern>
           </defs>
           <path
             fill="none"
             width="100%"
             height="100%"
             transform="translate(50 50)"
-            stroke-width="4"
-            style={{ transition: "all 0.3s ease 0s;" }}
+            strokeWidth="4"
+            style={{ transition: "all 0.3s ease 0s" }}
             stroke="url(#blob-gradient)"
           >
             <animate
@@ -49,8 +54,8 @@ function Blob(props) {
         >
           <defs>
             <linearGradient id="blob-gradient" x1="0" x2="1" y1="1" y2="0">
-              <stop id="stop1" stop-color="#00FF87FF" offset="0%"></stop>
-              <stop id="stop2" stop-color="#43CAF0FF" offset="100%"></stop>
+              <stop id="stop1" stopColor="#00FF87FF" offset="0%"></stop>
+              <stop id="stop2" stopColor="#43CAF0FF" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path
@@ -58,8 +63,8 @@ function Blob(props) {
             width="100%"
             height="100%"
             transform="translate(50 50)"
-            stroke-width="4"
-            style={{ transition: "all 0.3s ease 0s;" }}
+            strokeWidth="4"
+            style={{ transition: "all 0.3s ease 0s" }}
             stroke="url(#blob-gradient)"
           >
             <animate

@@ -1,14 +1,13 @@
 "use client";
 
-import ProjectCard from "@/components/ProjectCard";
-import Image from "next/image";
-import Link from "next/link";
-import projects from "@/content/projects";
 import Blob from "@/components/Blob";
+import ProjectCard from "@/components/ProjectCard";
+import projects from "@/content/projects";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "/src/aos-animations.css";
+import Link from "next/link";
 import { useEffect } from "react";
+import "/src/aos-animations.css";
 
 export default function Home() {
   useEffect(() => {
@@ -20,15 +19,14 @@ export default function Home() {
   });
   return (
     <>
-      <section className="w-full h-[calc(100vh-66px)] pb-8">
+      <section className="w-full h-[calc(100vh-100px)] pb-8" id="top">
         <div className="margins h-full flex items-center">
           <div className="flex justify-between gap-x-20 items-center">
-            <div className="flex flex-col gap-y-4 w-1/2">
+            <div className="flex flex-col gap-y-4 w-1/2 max-lg:w-full">
               <div className="flex justify-start gap-x-2" data-aos="fade-in-up">
                 <h1 className="text-transparent bg-clip-text gradient-text animate-gradient-text">
                   Hi, I&apos;m Joe 👍
                 </h1>
-                
               </div>
 
               <div
@@ -39,25 +37,25 @@ export default function Home() {
                 <p>
                   I am currently a student at{" "}
                   <Link href="/" className="link">
-                    XYZ
+                    Georgia Tech
                   </Link>{" "}
                   studying Computer Science. I&apos;m particularly passionate
                   about{" "}
-                  <Link href={"/"} className="link">
+                  <span href={"/"} className="link">
                     web dev
-                  </Link>
+                  </span>
                   ,{" "}
-                  <Link href={"/"} className="link">
+                  <span href={"/"} className="link">
                     machine learning
-                  </Link>
+                  </span>
                   ,{" "}
-                  <Link href={"/"} className="link">
+                  <span href={"/"} className="link">
                     3D graphics
-                  </Link>
+                  </span>
                   , and{" "}
-                  <Link href={"/"} className="link">
+                  <span href={"/"} className="link">
                     social good
-                  </Link>
+                  </span>
                   . In my free time, I enjoy biking, ping pong, and video games.
                   This is a place for me to show off what I&apos;ve been up to
                   and mess around with cool stuff I find interesting.
@@ -69,14 +67,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-8">
-        <div className="margins flex flex-col gap-y-10 items-center">
-          <div
-            className="relative w-full flex items-center justify-center"
-            data-aos="fade-in"
-          >
-            <hr className="w-full absolute -z-10" />
-            <h2 className="bg-bg-1 px-7">Projects</h2>
+      <hr className="margins mb-4" />
+
+      <section className="py-8" id="projects">
+        <div className="margins flex flex-col gap-y-6 items-center">
+          <div className="w-full flex flex-col gap-y-2">
+            <div
+              className="relative w-full flex items-center justify-start gap-x-3"
+              data-aos="fade-in"
+            >
+              <div className="w-0 h-0 border-l-[15px] border-l-transparent border-b-[22.5px] border-r-[15px] border-r-transparent border-b-palette-cyan max-sm:border-l-[12px] max-sm:border-b-[18px] max-sm:border-r-[12px] mb-0.5 rotate-90" />
+              <h2>Projects</h2>
+            </div>
+            <p>Some projects I did. Hover for more info.</p>
           </div>
 
           <div className="grid grid-cols-2 max-md:grid-cols-1 gap-8">
@@ -92,12 +95,6 @@ export default function Home() {
               />
             ))}
           </div>
-          <Link
-            href={"/projects"}
-            className="btn-primary h-9 flex items-center justify-center"
-          >
-            View More
-          </Link>
         </div>
       </section>
     </>

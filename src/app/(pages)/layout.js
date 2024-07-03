@@ -1,8 +1,15 @@
-import { Inter, Carme, IBM_Plex_Sans, DM_Sans } from "next/font/google";
+import {
+  Inter,
+  Carme,
+  IBM_Plex_Sans,
+  DM_Sans,
+  Poppins,
+} from "next/font/google";
 import "../globals.css";
-import LoadingProvider from "@/context/LoadingContext";
+import LoadingProvider from "@/contexts/LoadingContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ThemeProvider from "@/contexts/ThemeContext";
 
 const font = DM_Sans({
   weight: ["200", "300", "400", "500", "600", "700"],
@@ -15,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="duration-200 dark">
       <head>
         <link
           rel="apple-touch-icon"
@@ -38,9 +45,11 @@ export default function RootLayout({ children }) {
       </head>
       <body className={font.className}>
         <LoadingProvider>
-          <Navbar />
-          {children}
-          <Footer />
+          <ThemeProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </LoadingProvider>
       </body>
     </html>

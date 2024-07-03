@@ -3,39 +3,53 @@
 @tailwind utilities;
 
 .gradient-text {
-  background: linear-gradient(to right,
-      #00ff87,
-      #60efff,
-      #e81cff,
-      #e32636,
-      #e81cff,
-      #60efff,
-      #00ff87);
+  background: linear-gradient(
+    to right,
+    rgba(var(--palette-green)),
+    rgba(var(--palette-cyan)),
+    rgba(var(--palette-purple)),
+    rgba(var(--palette-magenta)),
+    rgba(var(--palette-purple)),
+    rgba(var(--palette-cyan)),
+    rgba(var(--palette-green))
+  );
   background-size: 400% 400%;
   background-clip: text;
 }
 
 .gradient-bg-b {
-  background: linear-gradient(to bottom, #00ff87, #60efff, #e81cff, #e32636);
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--palette-green)),
+    rgba(var(--palette-cyan)),
+    rgba(var(--palette-purple)),
+    rgba(var(--palette-magenta))
+  );
   background-size: 400% 400%;
 }
 
 .gradient-bg-r {
-  background: linear-gradient(to right, #00ff87, #60efff, #e81cff, #e32636);
+  background: linear-gradient(
+    to right,
+    rgba(var(--palette-green)),
+    rgba(var(--palette-cyan)),
+    rgba(var(--palette-purple)),
+    rgba(var(--palette-magenta))
+  );
   background-size: 100% 100%;
 }
 
 @layer components {
   .margins {
-    @apply m-auto w-[min(950px,96%)];
+    @apply m-auto w-[min(950px,calc(100%-30px))];
   }
 
   .nav-margins {
-    @apply m-auto w-[min(960px,96%)];
+    @apply m-auto w-[min(1060px,calc(100%-12px))];
   }
 
   .navlink {
-    @apply text-text-3 font-semibold duration-200 relative rounded px-2 py-1 flex items-center text-sm hover:bg-[#f1f1f1] justify-center;
+    @apply text-text-3 capitalize font-semibold duration-200 relative rounded p-2 flex items-center text-sm hover:bg-nav-hover justify-center cursor-pointer;
   }
 
   .link {
@@ -52,20 +66,59 @@
 }
 
 @layer base {
+  .light {
+    --palette-green: 0, 255, 135;
+    --palette-cyan: 67, 202, 240;
+    --palette-magenta: 227, 38, 54;
+    --palette-purple: 232, 28, 255;
+    --palette-cyan-dark: 24, 190, 237;
+    --palette-cyan-light-1: 199, 239, 250;
+    --palette-cyan-light-2: 217, 244, 252;
+    --nav-hover: 135, 135, 135, 0.11;
+    --bg-1: 253, 253, 255;
+    --bg-2: 253, 253, 255;
+    --border: 222, 222, 218;
+    --text-1: 0, 0, 0;
+    --text-2: 47, 51, 54;
+    --text-3: 85, 85, 95;
+    --themeicon: 114, 150, 171;
+  }
+  .dark {
+    --palette-green: 0, 255, 135;
+    --palette-cyan: 67, 202, 240;
+    --palette-magenta: 227, 38, 54;
+    --palette-purple: 250, 70, 255;
+    --palette-cyan-dark: 24, 190, 237;
+    --palette-cyan-light-1: 199, 239, 250;
+    --palette-cyan-light-2: 217, 244, 252;
+    --nav-hover: 241, 241, 241, 0.11;
+    --bg-1: 22, 22, 25;
+    --bg-2: 28, 28, 33;
+    --border: 48, 48, 53;
+    --text-1: 255, 255, 255;
+    --text-2: 255, 255, 255;
+    --text-3: 230, 230, 230;
+    --themeicon: 255, 207, 57;
+  }
+
+  hr {
+    @apply border-border;
+  }
+
   html {
     @apply overflow-y-scroll overflow-x-hidden bg-bg-1;
   }
 
   h1 {
-    @apply font-bold text-text-1 text-5xl;
+    @apply font-bold text-text-1 text-5xl max-sm:text-4xl;
   }
 
   h2 {
-    @apply font-bold text-text-1 text-4xl;
+    @apply font-bold text-text-1 text-4xl max-sm:text-3xl;
   }
 
   h3 {
-    @apply font-bold text-text-1 text-3xl;
+    @apply font-bold text-text-1 text-3xl max-sm:text-2xl;
   }
 
   h4 {
