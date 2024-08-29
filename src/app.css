@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backface-hidden {
+	backface-visibility: hidden;
+}
+
+.gradient-text {
+	background: linear-gradient(
+		to right,
+		rgba(var(--palette-green)),
+		rgba(var(--palette-cyan)),
+		rgba(var(--palette-purple)),
+		rgba(var(--palette-magenta)),
+		rgba(var(--palette-purple)),
+		rgba(var(--palette-cyan)),
+		rgba(var(--palette-green))
+	);
+	background-size: 400% 400%;
+	background-clip: text;
+}
+
+.gradient-bg-b {
+	background: linear-gradient(
+		to bottom,
+		rgba(var(--palette-green)),
+		rgba(var(--palette-cyan)),
+		rgba(var(--palette-purple)),
+		rgba(var(--palette-magenta))
+	);
+}
+
+.gradient-bg-r {
+	background: linear-gradient(
+		to right,
+		rgba(var(--palette-green)),
+		rgba(var(--palette-cyan)),
+		rgba(var(--palette-purple)),
+		rgba(var(--palette-magenta))
+	);
+}
+
+@layer components {
+	.margins {
+		@apply m-auto w-[min(950px,calc(100%-30px))];
+	}
+
+	.nav-margins {
+		@apply m-auto w-[min(1020px,calc(100%-12px))];
+	}
+
+	.navlink {
+		@apply text-text-3 font-semibold duration-200 relative rounded p-2 flex items-center text-sm hover:bg-nav-hover justify-center cursor-pointer;
+	}
+
+	.link {
+		@apply font-medium duration-200 relative after:rounded-sm after:w-full after:h-[50%] after:bg-palette-purple/10 text-palette-purple after:absolute after:left-1 after:bottom-0 after:duration-200 after:origin-right hover:after:-left-[2px] hover:after:w-[calc(100%+4px)] hover:after:bottom-[10%] hover:after:h-[80%] whitespace-nowrap;
+	}
+
+	.btn-primary {
+		@apply bg-palette-cyan text-bg-1 rounded-lg px-4 duration-200 font-semibold relative before:bg-palette-cyan/50 before:w-full before:h-full before:absolute before:left-1 before:top-1 before:rounded-lg before:-z-10 hover:before:top-0 hover:before:left-0 before:duration-200 hover:bg-palette-cyan-dark;
+	}
+
+	.btn-secondary {
+		@apply bg-palette-cyan-light-2 text-palette-cyan-dark rounded-lg px-4 duration-200 font-semibold relative before:bg-palette-cyan-light-2/50 before:w-full before:h-full before:absolute before:left-1 before:top-1 before:rounded-lg before:-z-10 hover:before:top-0 hover:before:left-0 before:duration-200 hover:bg-palette-cyan-light-1;
+	}
+}
+
+@layer base {
+	.light {
+		--palette-green: 0, 255, 135;
+		--palette-cyan: 67, 202, 240;
+		--palette-magenta: 227, 38, 54;
+		--palette-purple: 232, 28, 255;
+		--palette-cyan-dark: 24, 190, 237;
+		--palette-cyan-light-1: 199, 239, 250;
+		--palette-cyan-light-2: 217, 244, 252;
+		--nav-hover: 135, 135, 135, 0.11;
+		--bg-1: 252, 252, 254;
+		--bg-2: 254, 255, 255;
+		--border: 222, 222, 218;
+		--text-1: 0, 0, 0;
+		--text-2: 47, 51, 54;
+		--text-3: 85, 85, 95;
+		--themeicon: 114, 150, 171;
+	}
+	.dark {
+		--palette-green: 0, 255, 135;
+		--palette-cyan: 67, 202, 240;
+		--palette-magenta: 227, 38, 54;
+		--palette-purple: 250, 70, 255;
+		--palette-cyan-dark: 24, 190, 237;
+		--palette-cyan-light-1: 199, 239, 250;
+		--palette-cyan-light-2: 217, 244, 252;
+		--nav-hover: 241, 241, 241, 0.11;
+		--bg-1: 45, 43, 50;
+		--bg-2: 50, 50, 56;
+		--border: 48, 48, 53;
+		--text-1: 255, 255, 255;
+		--text-2: 255, 255, 255;
+		--text-3: 230, 230, 230;
+		--themeicon: 255, 207, 57;
+	}
+
+	hr {
+		@apply border-border;
+	}
+
+	html {
+		@apply overflow-y-scroll overflow-x-hidden bg-bg-1 font-dm-sans tracking-wide duration-200;
+	}
+
+	h1 {
+		@apply font-bold text-text-1 text-5xl max-sm:text-4xl;
+	}
+
+	h2 {
+		@apply font-bold text-text-1 text-4xl max-sm:text-3xl;
+	}
+
+	h3 {
+		@apply font-bold text-text-1 text-3xl max-sm:text-2xl;
+	}
+
+	h4 {
+		@apply font-semibold text-text-1 text-2xl;
+	}
+
+	h5 {
+		@apply font-medium text-text-1 text-xl;
+	}
+
+	h6 {
+		@apply font-medium text-lg text-text-1;
+	}
+
+	p {
+		@apply text-text-3;
+	}
+}
