@@ -39,7 +39,6 @@ export const projects = [
 		name: 'Gnomon Learning',
 		description:
 			'Website for Gnomon Learning, a tutoring service. Implements authentication and basic CRUD operations.',
-		github: 'https://github.com/idke64/gnomon',
 		link: 'gnomonlearning.org',
 		images: [gnomon_hero, gnomon_practice, gnomon_select]
 	},

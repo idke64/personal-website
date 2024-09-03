@@ -40,7 +40,7 @@
 		</div>
 
 		<div
-			class="opacity-100 flex flex-col gap-y-2 absolute md:top-[250px] max-md:bottom-0 h-auto justify-end px-6 py-3.5 duration-[400ms] bg-bg-2 w-full ease-in-out transition-all info"
+			class="opacity-100 flex flex-col gap-y-3.5 absolute md:top-[calc(100%-56px)] max-md:bottom-0 h-auto justify-end px-6 py-3.5 duration-[400ms] bg-bg-2 w-full ease-in-out transition-all info"
 			bind:this={info}
 		>
 			<div class="text-text-3 relative flex justify-between items-center">

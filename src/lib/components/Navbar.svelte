@@ -125,19 +125,16 @@
 					projects
 				</button>
 
-				<button
-					on:click={console.log(firstSpin, secondSpin)}
-					to="contacts"
-					smooth={true}
-					spy={true}
-					offset={-68}
-					duration={500}
+				<a
+					href="/resume.pdf"
+					target="_blank" 
+					rel="noopener noreferrer"
 					class={`navlink hover:after:opacity-100 after:duration-200 hover:after:rotate-0 after:opacity-0 after:absolute after:-bottom-3 after:left-[calc(50%-4.5px)] after:w-0 after:h-0 after:border-l-[6px] after:border-l-transparent after:border-b-[9px] after:border-b-palette-magenta after:border-r-[6px] after:border-r-transparent after:rotate-180 ${
 						route === '/contact' && 'after:opacity-100 after:rotate-180 bg-[#f1f1f1]'
 					}`}
 				>
-					contact
-				</button>
+					resume
+					</a>
 				<button
 					on:click={() => {
 						if (!firstSpin && !secondSpin) {
