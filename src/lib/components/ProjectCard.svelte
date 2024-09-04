@@ -23,14 +23,14 @@
 </script>
 
 <div class="rounded w-full shadow overflow-hidden">
-	<div class="flex flex-col items-center relative">
-		<div class={`w-full h-72 bg-bg-3 flex justify-start`}>
+	<div class="flex flex-col items-center relative h-72">
+		<div class={`w-full h-full bg-bg-3 flex justify-start`}>
 			{#if images}
 				{#each images as image, index}
 					<img
 						src={image}
 						alt=""
-						class={`w-full h-full object-cover object-top duration-400 duration-500`}
+						class={`w-full h-full object-cover object-top duration-500`}
 						style="transform: translateX(calc(-100% * {currPos}));"
 					/>
 				{/each}
