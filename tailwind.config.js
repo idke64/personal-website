@@ -68,7 +68,8 @@ export default {
 				text: {
 					1: 'rgba(var(--text-1))',
 					2: 'rgba(var(--text-2))',
-					3: 'rgba(var(--text-3))'
+					3: 'rgba(var(--text-3))',
+					4: 'rgba(var(--text-4))',
 				}
 			}
 		}

@@ -18,7 +18,7 @@
 			>
 				<Fa class=" text-text-3 hover:text-text-1 duration-200" icon={faLinkedin} size="lg" />
 			</a>
-			<a href={'mailto:deliciousbrain42@gmail.com'} target="_blank" rel="noopener noreferrer">
+			<a href={'mailto:andyye9999@gmail.com'} target="_blank" rel="noopener noreferrer">
 				<Fa class=" text-text-3 hover:text-text-1 duration-200" icon={faEnvelope} size="lg" />
 			</a>
 		</div>

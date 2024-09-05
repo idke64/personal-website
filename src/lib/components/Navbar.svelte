@@ -153,6 +153,7 @@
 						size="1.2x"
 					/>
 				</button>
+				
 			</div>
 		</div>
 	</div>
