@@ -24,14 +24,14 @@
 
 <div class="rounded w-full shadow overflow-hidden">
 	<div class="flex flex-col items-center relative h-72">
-		<div class={`w-full h-full bg-bg-3 flex justify-start`}>
+		<div class={`w-full h-full bg-bg-3 flex justify-start relative`}>
 			{#if images}
 				{#each images as image, index}
 					<img
 						src={image}
 						alt=""
-						class={`w-full h-full object-cover object-top duration-500`}
-						style="transform: translateX(calc(-100% * {currPos}));"
+						class={`w-full absolute h-full object-cover object-top duration-500`}
+						style="left: calc(100% * {index - currPos});"
 					/>
 				{/each}
 			{:else}
@@ -40,7 +40,7 @@
 		</div>
 
 		<div
-			class="opacity-100 flex flex-col gap-y-3.5 absolute md:top-[calc(100%-56px)] max-md:bottom-0 h-auto justify-end px-6 py-3.5 duration-[400ms] bg-bg-2 w-full ease-in-out transition-all info"
+			class="opacity-100 flex flex-col gap-y-3.5 absolute sm:top-[calc(100%-56px)] max-sm:bottom-0 h-auto justify-end px-6 py-3.5 duration-[400ms] bg-bg-2 w-full ease-in-out transition-all info"
 			bind:this={info}
 		>
 			<div class="text-text-3 relative flex justify-between items-center">

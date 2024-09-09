@@ -42,7 +42,7 @@
 			<p>Some projects I did. Hover for more info.</p>
 		</div>
 
-		<div class="grid grid-cols-2 max-md:grid-cols-1 grid-rows-1 gap-8">
+		<div class="grid grid-cols-2 w-full max-sm:grid-cols-1 grid-rows-1 gap-8">
 			{#each projects as project}
 				<ProjectCard
 					images={project.images}
