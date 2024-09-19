@@ -10,6 +10,9 @@ import gnomon_select from '../assets/projects/gnomon/gnomon_select.png';
 import shoehud_action from '../assets/projects/shoehud/shoehud_action.png';
 import shoehud_main from '../assets/projects/shoehud/shoehud_main.png';
 import shoehud_score from '../assets/projects/shoehud/shoehud_score.png';
+import chip8emulatorrust_pong from '../assets/projects/chip8emulatorrust/chip8emulatorrust_pong.png';
+import chip8emulatorrust_airplane from '../assets/projects/chip8emulatorrust/chip8emulatorrust_airplane.png';
+
 
 export const projects = [
 	{
@@ -48,5 +51,11 @@ export const projects = [
 			'Custom heads-up display for Team Fortress 2. Includes custom assets and ui for a variety of game features.',
 		github: 'https://github.com/idke64/shoehud',
 		images: [shoehud_main, shoehud_action, shoehud_score]
+	},
+	{
+		name: 'CHIP-8 Emulator in Rust',
+		description: 'Complete Rust implementation of the CHIP-8 instruction set.',
+		github: 'https://github.com/idke64/chip8-emulator-rust',
+		images: [chip8emulatorrust_pong, chip8emulatorrust_airplane]
 	}
 ];
