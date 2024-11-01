@@ -14,10 +14,15 @@
 
 	let scrollMaxY = 0;
 
-	$: width = `${100 - (scrollPosition / scrollMaxY) * 100}%`;
+	let width = 0;
+
+	$: {
+		width = `${100 - (scrollPosition / scrollMaxY) * 100}%`;
+		console.log(scrollPosition + ' ' + scrollMaxY);
+	}
 
 	onMount(() => {
-		scrollMaxY = document.getElementById('body').scrollHeight - window.innerHeight;
+		scrollMaxY = document.documentElement.scrollHeight - window.innerHeight;
 
 		window.addEventListener('scroll', () => {
 			scrollPosition = window.scrollY;
