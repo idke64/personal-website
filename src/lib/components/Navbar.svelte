@@ -6,6 +6,7 @@
 	import Fa from 'svelte-fa';
 	import { faMoon, faSmile } from '@fortawesome/free-regular-svg-icons';
 	import { faSun } from '@fortawesome/free-regular-svg-icons';
+	import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 	let theme = 'light';
 
@@ -122,19 +123,19 @@
 						route === '/projects' && 'after:opacity-100 after:rotate-180 bg-[#f1f1f1]'
 					}`}
 				>
-					projects
+					Projects
 				</button>
 
 				<a
 					href="/resume.pdf"
-					target="_blank" 
+					target="_blank"
 					rel="noopener noreferrer"
 					class={`navlink hover:after:opacity-100 after:duration-200 hover:after:rotate-0 after:opacity-0 after:absolute after:-bottom-3 after:left-[calc(50%-4.5px)] after:w-0 after:h-0 after:border-l-[6px] after:border-l-transparent after:border-b-[9px] after:border-b-palette-magenta after:border-r-[6px] after:border-r-transparent after:rotate-180 ${
 						route === '/contact' && 'after:opacity-100 after:rotate-180 bg-[#f1f1f1]'
 					}`}
 				>
-					resume
-					</a>
+					Resume
+				</a>
 				<button
 					on:click={() => {
 						if (!firstSpin && !secondSpin) {
@@ -143,7 +144,7 @@
 						console.log(firstSpin);
 					}}
 					on:animationend={handleSpinTransition}
-					class="p-2 flex justify-center rounded hover:bg-nav-hover duration-200"
+					class="p-2 flex justify-center rounded hover:bg-text-3/10 duration-200"
 				>
 					<Fa
 						icon={theme === 'dark' ? faSun : faMoon}
@@ -153,7 +154,12 @@
 						size="1.2x"
 					/>
 				</button>
-				
+				<a
+					href="https://github.com/idke64/personal-website"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="ml-2 btn-primary h-9 gap-x-1.5"><Fa icon={faGithub} />View on Github</a
+				>
 			</div>
 		</div>
 	</div>

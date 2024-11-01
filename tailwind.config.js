@@ -59,7 +59,6 @@ export default {
 					'cyan-light-2': 'rgba(var(--palette-cyan-light-2))'
 				},
 				themeicon: 'rgba(var(--themeicon))',
-				'nav-hover': 'rgba(var(--nav-hover))',
 				border: 'rgba(var(--border))',
 				bg: {
 					1: 'rgba(var(--bg-1))',
@@ -69,7 +68,7 @@ export default {
 					1: 'rgba(var(--text-1))',
 					2: 'rgba(var(--text-2))',
 					3: 'rgba(var(--text-3))',
-					4: 'rgba(var(--text-4))',
+					4: 'rgba(var(--text-4))'
 				}
 			}
 		}

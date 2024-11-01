@@ -51,7 +51,7 @@
 	}
 
 	.navlink {
-		@apply text-text-3 font-semibold duration-200 relative rounded p-2 flex items-center text-sm hover:bg-nav-hover justify-center cursor-pointer;
+		@apply text-text-3 font-semibold duration-200 relative rounded p-2 flex items-center text-sm hover:bg-text-3/10 justify-center cursor-pointer;
 	}
 
 	.link {
@@ -59,7 +59,7 @@
 	}
 
 	.btn-primary {
-		@apply bg-palette-cyan text-bg-1 rounded-lg px-4 duration-200 font-semibold relative before:bg-palette-cyan/50 before:w-full before:h-full before:absolute before:left-1 before:top-1 before:rounded-lg before:-z-10 hover:before:top-0 hover:before:left-0 before:duration-200 hover:bg-palette-cyan-dark;
+		@apply bg-transparent text-text-3 border-text-3 border-[1.5px] flex items-center hover:bg-text-2/10 text-sm font-semibold rounded px-4 duration-200 relative;
 	}
 
 	.btn-secondary {
@@ -76,14 +76,13 @@
 		--palette-cyan-dark: 24, 190, 237;
 		--palette-cyan-light-1: 199, 239, 250;
 		--palette-cyan-light-2: 217, 244, 252;
-		--nav-hover: 135, 135, 135, 0.11;
 		--bg-1: 252, 252, 254;
 		--bg-2: 254, 255, 255;
 		--border: 222, 222, 218;
 		--text-1: 0, 0, 0;
 		--text-2: 47, 51, 54;
 		--text-3: 85, 85, 95;
-		--text-4: 230,230,230;
+		--text-4: 230, 230, 230;
 		--themeicon: 114, 150, 171;
 	}
 	.dark {
@@ -94,7 +93,6 @@
 		--palette-cyan-dark: 24, 190, 237;
 		--palette-cyan-light-1: 199, 239, 250;
 		--palette-cyan-light-2: 217, 244, 252;
-		--nav-hover: 241, 241, 241, 0.11;
 		--bg-1: 45, 43, 50;
 		--bg-2: 50, 50, 56;
 		--border: 48, 48, 53;
