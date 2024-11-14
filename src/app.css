@@ -47,7 +47,7 @@
 	}
 
 	.nav-margins {
-		@apply m-auto w-[min(1020px,calc(100%-12px))];
+		@apply m-auto w-[min(1100px,calc(100%-12px))];
 	}
 
 	.navlink {
@@ -59,11 +59,11 @@
 	}
 
 	.btn-primary {
-		@apply bg-transparent text-text-3 border-text-3 border-[1.5px] flex items-center hover:bg-text-2/10 text-sm font-semibold rounded px-4 duration-200 relative;
+		@apply bg-transparent text-text-3 border-text-3 border-[1.5px] flex items-center hover:bg-text-2/10 text-sm font-semibold rounded duration-200 relative;
 	}
 
 	.btn-secondary {
-		@apply bg-palette-cyan-light-2 text-palette-cyan-dark rounded-lg px-4 duration-200 font-semibold relative before:bg-palette-cyan-light-2/50 before:w-full before:h-full before:absolute before:left-1 before:top-1 before:rounded-lg before:-z-10 hover:before:top-0 hover:before:left-0 before:duration-200 hover:bg-palette-cyan-light-1;
+		@apply bg-palette-cyan-light-2 text-palette-cyan-dark rounded duration-200 font-semibold relative before:bg-palette-cyan-light-2/50 before:w-full before:h-full before:absolute before:left-1 before:top-1 before:rounded-lg before:-z-10 hover:before:top-0 hover:before:left-0 before:duration-200 hover:bg-palette-cyan-light-1;
 	}
 }
 

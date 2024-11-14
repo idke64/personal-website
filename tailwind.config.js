@@ -46,7 +46,8 @@ export default {
 				DEFAULT: 'rgba(var(--border))'
 			},
 			borderRadius: {
-				DEFAULT: '4px'
+				DEFAULT: '8px',
+				sm: '4px'
 			},
 			colors: {
 				palette: {

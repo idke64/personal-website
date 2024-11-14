@@ -4,7 +4,7 @@
 	import { projects } from '$lib';
 </script>
 
-<section class="w-full h-[calc(100vh-100px)] pb-8" id="top">
+<section class="w-full h-[calc(100vh-100px+70px)] pb-8" id="top">
 	<div class="margins h-full flex items-center">
 		<div class="flex justify-between gap-x-20 items-center">
 			<div class="flex flex-col gap-y-4 w-1/2 max-lg:w-full">
@@ -39,7 +39,7 @@
 					class="w-0 h-0 border-l-[10px] border-l-transparent border-b-[15px] border-r-[10px] border-r-transparent border-b-palette-cyan max-sm:border-l-[8px] max-sm:border-b-[12px] max-sm:border-r-[8px] mb-0.5 rotate-90 mt-2"
 				/>
 			</div>
-			<p>Some projects I did. Hover for more info.</p>
+			<p>Some projects I did</p>
 		</div>
 
 		<div class="grid grid-cols-2 w-full max-sm:grid-cols-1 grid-rows-1 gap-8">

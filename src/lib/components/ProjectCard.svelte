@@ -1,7 +1,15 @@
 <script>
 	import '../../app.css';
 	import { faGithub } from '@fortawesome/free-brands-svg-icons';
-	import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+	import {
+		faArrowLeft,
+		faArrowRight,
+		faArrowUpRightFromSquare,
+		faCaretLeft,
+		faCaretRight,
+		faChevronLeft,
+		faChevronRight
+	} from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 	export let images;
 	export let name;
@@ -30,7 +38,7 @@
 					<img
 						src={image}
 						alt=""
-						class={`w-full absolute h-full object-cover object-top duration-500`}
+						class={`w-full absolute h-[99%] object-cover object-top duration-500 rounded-b`}
 						style="left: calc(100% * {index - currPos});"
 					/>
 				{/each}
@@ -38,9 +46,25 @@
 				<div class="w-full h-full bg-gray-100" />
 			{/if}
 		</div>
-
+		{#if images && images.length > 1}
+			<div
+				class="absolute top-2 bg-bg-1 hover:opacity-100 opacity-40 duration-200 right-2 flex rounded p-1"
+			>
+				<button
+					on:click={() =>
+						(currPos = (currPos - (1 % images.length) + images.length) % images.length)}
+					class="h-6 hover:bg-text-2/10 aspect-square duration-100 flex items-center justify-center text-text-1 rounded-sm"
+					><Fa size="sm" icon={faChevronLeft} /></button
+				>
+				<button
+					on:click={() => (currPos = (currPos + 1) % images.length)}
+					class="h-6 hover:bg-text-2/10 aspect-square duration-100 flex items-center justify-center text-text-1 rounded-sm"
+					><Fa size="sm" icon={faChevronRight} /></button
+				>
+			</div>
+		{/if}
 		<div
-			class="opacity-100 flex flex-col gap-y-3.5 absolute sm:top-[calc(100%-56px)] max-sm:bottom-0 h-auto justify-end px-6 py-3.5 duration-[400ms] bg-bg-2 w-full ease-in-out transition-all info"
+			class="opacity-100 flex flex-col gap-y-3.5 absolute sm:top-[calc(100%-60px)] max-sm:bottom-0 h-auto justify-end px-6 py-3.5 duration-[400ms] bg-bg-2 w-full ease-in-out transition-all info"
 			bind:this={info}
 		>
 			<div class="text-text-3 relative flex justify-between items-center">
@@ -69,25 +93,11 @@
 			</p>
 			<div class="flex gap-x-3 font-normal">
 				{#if github}
-					<a
-						href={github}
-						class=" text-text-3 flex item-center justify-center"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Fa class=" h-[18px] text-text-3" icon={faGithub} />
-					</a>
+					<a href={github} class="link" target="_blank" rel="noopener noreferrer"> Github </a>
 				{/if}
 
 				{#if link}
-					<a
-						href={link}
-						class="text-text-3 flex item-end justify-center"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Fa class="h-4 text-text-3" icon={faArrowUpRightFromSquare} />
-					</a>
+					<a href={link} class="link" target="_blank" rel="noopener noreferrer">Link</a>
 				{/if}
 			</div>
 		</div>
