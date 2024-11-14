@@ -7,9 +7,9 @@
 
 <footer class="w-full">
 	<div
-		class="flex gap-y-5 mb-3 justify-end items-center px-2 max-md:items-center max-md:px-0 relative"
+		class="flex gap-y-5 my-4 justify-end items-center px-2 max-md:items-center max-md:px-0 relative"
 	>
-		<div class="flex gap-x-4 pt-12 bg-bg-1 px-4">
+		<div class="flex gap-x-4 bg-bg-1 px-4">
 			<a href={'https://github.com/idke64/'} target="_blank" rel="noopener noreferrer">
 				<Fa
 					class="text-text-3 hover:text-text-1 hover:animate-wiggle duration-200"

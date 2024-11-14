@@ -2,6 +2,7 @@
 	import '../../app.css';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 
 	import Fa from 'svelte-fa';
 	import { faMoon, faSmile } from '@fortawesome/free-regular-svg-icons';
@@ -16,11 +17,12 @@
 
 	let width = 0;
 
-	$: width = `${100 - (Math.min(scrollPosition, scrollMaxY) / scrollMaxY) * 100}%`;
+	$: if (browser) {
+		scrollMaxY = document.documentElement.scrollHeight - window.innerHeight;
+		width = `${100 - (Math.min(Math.floor(scrollPosition), scrollMaxY) / scrollMaxY) * 100}%`;
+	}
 
 	onMount(() => {
-		scrollMaxY = document.documentElement.scrollHeight - window.innerHeight + 16;
-
 		window.addEventListener('scroll', () => {
 			scrollPosition = window.scrollY;
 		});

@@ -4,7 +4,7 @@
 	import { projects } from '$lib';
 </script>
 
-<section class="w-full h-[calc(100vh-100px+70px)] pb-8" id="top">
+<section class="w-full h-[calc(100vh-100px+62px)] pb-8" id="top">
 	<div class="margins h-full flex items-center">
 		<div class="flex justify-between gap-x-20 items-center">
 			<div class="flex flex-col gap-y-4 w-1/2 max-lg:w-full">
