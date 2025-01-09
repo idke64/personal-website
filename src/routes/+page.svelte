@@ -5,6 +5,12 @@
 </script>
 
 <section class="w-full h-[calc(100vh-100px+62px)] pb-8" id="top">
+	<div
+		class="absolute right-0 -z-10 h-full w-2/3 bg-[linear-gradient(to_right,_grey_1px,_transparent_1px),_linear-gradient(to_bottom,_grey_1px,_transparent_1px)] bg-[length:20px_20px] max-lg:w-full"
+	>
+		<div class="to-bg-1 from-bg-1 via-bg-1/50 absolute inset-0 bg-gradient-to-r"></div>
+		<div class="to-bg-1 from-bg-1 via-bg-1/50 absolute inset-0 bg-gradient-to-b"></div>
+	</div>
 	<div class="margins h-full flex items-center">
 		<div class="flex justify-between gap-x-20 items-center">
 			<div class="flex flex-col gap-y-4 w-1/2 max-lg:w-full">
@@ -20,7 +26,7 @@
 						I am currently a student at{' '}
 						<a href="/" class="link">Georgia Tech</a>
 						{' '}
-						studying Computer Science and I like pretty websites.
+						studying Computer Science and I like to build things.
 					</div>
 				</div>
 			</div>

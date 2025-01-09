@@ -86,7 +86,7 @@
 		<div style="width: {width}" class="bg-bg-2 h-[3px] w-full right-0 top-0 z-50 absolute" />
 	</div>
 	<nav
-		class={`${scrollPosition > 16 ? 'nav-margins mt-4 rounded border' : 'w-full'} h-[62px] bg-bg-2/75 backdrop-blur-sm z-49 duration-200`}
+		class={`${scrollPosition > 16 ? 'nav-margins mt-4 rounded border shadow' : 'w-full'} h-[62px] bg-bg-2/75 backdrop-blur-sm z-49 duration-200`}
 	>
 		<div class="h-full flex items-center px-6">
 			<div class="flex justify-between w-full">

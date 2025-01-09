@@ -28,6 +28,28 @@ export default {
 					'67%': { transform: 'rotate(0deg)' },
 					'83%': { transform: 'rotate(-9deg)' },
 					'100%': { transform: 'rotate(0deg)' }
+				},
+				load: {
+					'0%': {
+						transform: 'translate3d(-30px, 30px, 0) scale(1) rotate(0deg)',
+						opacity: '1'
+					},
+					'25%': {
+						transform: 'translate3d(30px, 30px, 0) scale(0.5) rotate(90deg)',
+						opacity: '0.75'
+					},
+					'50%': {
+						transform: 'translate3d(30px, -30px, 0) scale(1) rotate(180deg)',
+						opacity: '0.5'
+					},
+					'75%': {
+						transform: 'translate3d(-30px, -30px, 0) scale(0.5) rotate(270deg)',
+						opacity: '0.75'
+					},
+					'100%': {
+						transform: 'translate3d(-30px, 30px, 0) scale(1) rotate(360deg)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
