@@ -12,8 +12,17 @@ import shoehud_main from '../assets/projects/shoehud/shoehud_main.png';
 import shoehud_score from '../assets/projects/shoehud/shoehud_score.png';
 import chip8emulatorrust_pong from '../assets/projects/chip8emulatorrust/chip8emulatorrust_pong.png';
 import chip8emulatorrust_airplane from '../assets/projects/chip8emulatorrust/chip8emulatorrust_airplane.png';
+import doodluh_boards from '../assets/projects/doodluh/doodluh_boards.png';
+import doodluh_showcase from '../assets/projects/doodluh/doodluh_showcase.png';
 
 export const projects = [
+	{
+		name: 'Doodluh',
+		description: 'Collaborative drawing website with real-time updates and other fun stuff.',
+		github: 'https://github.com/idke64/doodluh',
+		link: 'https://doodluh.andyy.dev',
+		images: [doodluh_showcase, doodluh_boards]
+	},
 	{
 		name: 'CodeBytes',
 		description:
