@@ -79,6 +79,13 @@
 			behavior: 'smooth'
 		});
 	};
+
+	const scrollToExperiences = () => {
+		window.scrollTo({
+			top: document.getElementById('experiences').offsetTop - 60,
+			behavior: 'smooth'
+		});
+	};
 </script>
 
 <div class="flex justify-center w-full sticky top-0 z-50">
@@ -119,11 +126,9 @@
 				</div>
 
 				<div class="flex gap-x-4 items-center">
+					<button on:click={scrollToExperiences} class="navlink"> Experience </button>
 					<button on:click={scrollToProjects} class="navlink"> Projects </button>
 
-					<a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="navlink">
-						Resume
-					</a>
 					<button
 						on:click={() => {
 							if (!firstSpin && !secondSpin) {

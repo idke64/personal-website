@@ -1,7 +1,22 @@
 <script>
 	import '../app.css';
-	import { Blob, ProjectCard } from '$lib';
+	import { Blob, ProjectCard, ExperienceCard } from '$lib';
 	import { projects } from '$lib';
+	import { experiences } from '$lib';
+
+	const scrollToProjects = () => {
+		window.scrollTo({
+			top: document.getElementById('projects').offsetTop - 60,
+			behavior: 'smooth'
+		});
+	};
+
+	const scrollToExperiences = () => {
+		window.scrollTo({
+			top: document.getElementById('experiences').offsetTop - 60,
+			behavior: 'smooth'
+		});
+	};
 </script>
 
 <section class="w-full h-[calc(100vh-100px+62px)] pb-8" id="top">
@@ -36,16 +51,41 @@
 </section>
 <hr class="margins mb-4" />
 
+<section class="py-8" id="experiences">
+	<div class="margins flex flex-col gap-y-6 items-center">
+		<div class="w-full flex flex-col gap-y-2">
+			<div class="gap-y-3 flex flex-col">
+				<button class="self-start" on:click={scrollToExperiences}
+					><h3 class="hover:text-palette-green duration-300">Experiences</h3></button
+				>
+				<div class="w-8 h-1 bg-palette-green" />
+			</div>
+		</div>
+
+		<div class="flex flex-col gap-8 w-full">
+			{#each experiences as experience}
+				<ExperienceCard
+					images={experience.images}
+					name={experience.name}
+					title={experience.title}
+					from={experience.from}
+					to={experience.to}
+					description={experience.description}
+				/>
+			{/each}
+		</div>
+	</div>
+</section>
+
 <section class="py-8" id="projects">
 	<div class="margins flex flex-col gap-y-6 items-center">
 		<div class="w-full flex flex-col gap-y-2">
-			<div class="relative w-full flex items-center justify-start gap-x-3">
-				<h3>Projects</h3>
-				<div
-					class="w-0 h-0 border-l-[10px] border-l-transparent border-b-[15px] border-r-[10px] border-r-transparent border-b-palette-cyan max-sm:border-l-[8px] max-sm:border-b-[12px] max-sm:border-r-[8px] mb-0.5 rotate-90 mt-2"
-				/>
+			<div class="gap-y-3 flex flex-col">
+				<button class="self-start" on:click={scrollToProjects}
+					><h3 class="hover:text-palette-cyan duration-300">Projects</h3></button
+				>
+				<div class="w-8 h-1 bg-palette-cyan" />
 			</div>
-			<p>Some projects I did</p>
 		</div>
 
 		<div class="grid grid-cols-2 w-full max-sm:grid-cols-1 grid-rows-1 gap-8">

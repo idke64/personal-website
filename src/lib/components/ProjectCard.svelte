@@ -1,15 +1,5 @@
 <script>
-	import '../../app.css';
-	import { faGithub } from '@fortawesome/free-brands-svg-icons';
-	import {
-		faArrowLeft,
-		faArrowRight,
-		faArrowUpRightFromSquare,
-		faCaretLeft,
-		faCaretRight,
-		faChevronLeft,
-		faChevronRight
-	} from '@fortawesome/free-solid-svg-icons';
+	import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 	export let images;
 	export let name;
@@ -30,9 +20,9 @@
 	});
 </script>
 
-<div class="rounded w-full shadow overflow-hidden">
+<div class="rounded w-full shadow overflow-hidden hover:scale-105 duration-300">
 	<div class="flex flex-col items-center relative h-72">
-		<div class={`w-full h-full bg-bg-3 flex justify-start relative`}>
+		<div class="w-full h-full bg-bg-3 flex justify-start relative">
 			{#if images}
 				{#each images as image, index}
 					<img
